@@ -11,14 +11,9 @@ build:
     python: "3.11"
     nodejs: "18"
   jobs:
-    pre_create_environment:
-      # Install dependencies in a virtual environment
-      - asdf plugin-add nodejs
-      - asdf install nodejs 18.17.0
-      - asdf global nodejs 18.17.0
     post_checkout:
       # Generate documentation files from the main markdown
-      - node generate-rtd-docs.js
+      - nodejs generate-rtd-docs.js
 
 # Build documentation with MkDocs
 mkdocs:
