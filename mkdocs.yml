@@ -1,0 +1,51 @@
+site_name: QUBIX Documentation
+site_description: The Decentralized Application Layer for Robots
+site_url: https://qubix.readthedocs.io
+repo_url: https://github.com/qubix/qubix-docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
+  - Problem Statement: problem-statement.md
+  - Solution Overview: solution-overview.md
+  - Technology Architecture: technology-architecture.md
+  - Use Cases: use-cases.md
+  - Tokenomics: tokenomics.md
+  - Team: team.md
+  - Getting Started: getting-started.md
+  - Support & Community: support-community.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - mkdocs-simple-hooks:
+      hooks:
+        on_pre_build: "docs.hooks:copy_changelog"
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/qubix
+    - icon: fontawesome/brands/twitter  
+      link: https://twitter.com/qubix
